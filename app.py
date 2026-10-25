@@ -108,19 +108,27 @@ st.markdown("""
 # -------------------- Sidebar --------------------
 st.markdown("""
 <style>
-[data-testid="stSidebar"] {
-    background-color: #F3F6FB;
+/* Dark sidebar with strong text contrast */
+[data-testid="stSidebar"],
+[data-testid="stSidebar"] > div {
+    background-color: #10233F !important;
 }
 
-[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
-[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h2,
-[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h3,
-[data-testid="stSidebar"] [data-testid="stCaptionContainer"] {
-    color: #1F2937 !important;
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"],
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] *,
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] *,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] span {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
 }
 
 [data-testid="stSidebar"] hr {
-    border-color: #CBD5E1;
+    border-color: #64748B !important;
 }
 </style>
 """, unsafe_allow_html=True)
