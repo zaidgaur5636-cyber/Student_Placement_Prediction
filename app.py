@@ -106,15 +106,36 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # -------------------- Sidebar --------------------
+st.markdown("""
+<style>
+[data-testid="stSidebar"] {
+    background-color: #F3F6FB;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h2,
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h3,
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] {
+    color: #1F2937 !important;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: #CBD5E1;
+}
+</style>
+""", unsafe_allow_html=True)
+
 with st.sidebar:
     st.markdown("## 🎓 Placement Predictor")
     st.caption("Your personal placement assistant")
     st.markdown("---")
+
     st.markdown("### 🏠 Student Portal")
     st.markdown(
         "Enter your academic details to check your estimated "
         "placement chances."
     )
+
     st.markdown("---")
     st.caption("Predictions are estimates, not guarantees.")
 
